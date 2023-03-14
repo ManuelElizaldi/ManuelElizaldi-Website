@@ -13,8 +13,8 @@
 			<div id="wrapper" class="fade-in">
 				<!-- Intro -->
 					<div id="intro">
-						<h1>My Portfolio</h1>
-						<p>Data Analyst</a><br />
+						<h1>Manuel Elizaldi</h1>
+						<p>Data enthusiast</a><br />
 						<ul class="actions">
 							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
 						</ul>
@@ -28,8 +28,8 @@
 				<!-- Nav -->
 					<nav id="nav">
 						<ul class="links">
-							<li class="active"><a href="index.html">Project Portfolio</a></li>
-							<li><a href="generic.html">About Me</a></li>
+							<li class="active"><a href="index.html">Portfolio</a></li>
+							<li><a href="blog.html">Blog</a></li>
 						</ul>
 						<ul class="icons">
 							<li><a href="https://github.com/ManuelElizaldi" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
@@ -41,7 +41,23 @@
 				<!-- Main -->
 					<div id="main">
 
-						<!-- Featured Post -->
+							<!-- Post -->
+								<section class="post">
+									<header class="major">
+										<span class="date">April 25, 2017</span>
+										<h1>This is a<br />
+										Generic Page</h1>
+										<p>Aenean ornare velit lacus varius enim ullamcorper proin aliquam<br />
+										facilisis ante sed etiam magna interdum congue. Lorem ipsum dolor<br />
+										amet nullam sed etiam veroeros.</p>
+									</header>
+									<div class="image main"><img src="images/profile1.jpg" alt="" /></div>
+									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur sapien risus, commodo eget turpis at, elementum convallis enim turpis, lorem ipsum dolor sit amet nullam.</p>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus. Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum.</p>
+									<ul class="actions special">
+									</ul>
+								</section>
+						<!-- Featured Post 
 							<article class="post featured">
 								<header class="major">
 									<h2><a href="#">Manuel Elizaldi</a></h2>
@@ -51,7 +67,7 @@
 								<ul class="actions special">
 									<li><a href="#" class="button large">View Project</a></li>
 								</ul>
-							</article>
+							</article> -->
 
 						<!-- Posts -->
 						<!-- every article is a post, so work inside the <article> tags -->
@@ -64,9 +80,9 @@
 									</header>
 									<a href="https://github.com/jdwrhodes/Music_Recommendation_Website" class="image fit"><img src="images\musicapp.jpg" alt="" /></a>
 									<p>
-									In this collaborative project me and my team created a visualization using Tableau and Falsk to deploy a
-									K-Means Clustering Machine Learning model built in Python to recommend songs based on the 
-									similarities in audio features between the input song and Spotify's database.</p>
+									In this collaborative project me and my team created a music recommendation app using Falsk to deploy a
+									K-Means Clustering Machine Learning model built in Python to suggest songs based on the 
+									similarities in audio features between the songs.</p>
 									<ul class="actions special">
 										<li><a href="https://github.com/jdwrhodes/Music_Recommendation_Website" class="button">View Project</a></li>
 									</ul>
@@ -181,28 +197,49 @@
 					</div>
 
 				<!-- Footer -->
-					<footer id="footer">
-							<section>
-								<h3>Email</h3>
-								<p>
-								If you'd like to get in touch with me to collaborate in a project or have any inquiries please contact me at my personal email:
-								manuelelizaldib@gmail.com
-								</p>
-							</section>
-							<section>
-								<h3>Location</h3>
-								<p>Austin, Texas</p>
-							</section>
-							<section>
-								<h3>Social</h3>
-								<ul class="icons alt">
-									<li><a href="https://github.com/ManuelElizaldi" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-									<li><a href="https://www.linkedin.com/in/manuelelizaldi/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-									<li><a href="https://www.instagram.com/lifeof_elizaldi/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-								</ul>
-							</section>
+				<footer id="footer">
+					<section>
+						<form method="post" action="#">
+							<div class="fields">
+								<div class="field">
+									<label for="name">Name</label>
+									<input type="text" name="name" id="name" />
+								</div>
+								<div class="field">
+									<label for="email">Email</label>
+									<input type="text" name="email" id="email" />
+								</div>
+								<div class="field">
+									<label for="message">Message</label>
+									<textarea name="message" id="message" rows="3"></textarea>
+								</div>
+							</div>
+							<ul class="actions">
+								<li><input type="submit" value="Send Message" /></li>
+							</ul>
+						</form>
+					</section>
+					<section class="split contact">
+						<section class="alt">
+							<h3>Location</h3>
+							<p>
+							Austin, Texas
+							</p>
 						</section>
-					</footer>
+						<section>
+							<h3>Email</h3>
+							<p><a>manuelelizaldib@gmail.com</a></p>
+						</section>
+						<section>
+							<h3>Social</h3>
+							<ul class="icons alt">
+								<li><a href="https://github.com/ManuelElizaldi" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+								<li><a href="https://www.linkedin.com/in/manuelelizaldi/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+								<li><a href="https://www.instagram.com/lifeof_elizaldi/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							</ul>
+						</section>
+					</section>
+				</footer>
 
 				<!-- Copyright -->
 					<div id="copyright">
