@@ -1,0 +1,172 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Manuel Elizaldi - Project Description</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="icon" type="image/jpg" href="images/tab-icon.jpg">
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper" class="fade-in">
+				
+				<!-- Intro -->
+				<div id="intro">
+					<h1>PyStrava</h1>
+                    <p>Fitness App</p>
+					<ul class="actions">
+						<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+					</ul>
+				</div>
+
+				<!-- Header -->
+					<header id="header">
+						<a class="logo">Project Description</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Portfolio</a></li>
+							<li><a href="aboutme.html">About Me</a></li>
+							<li><a href="blog.html">Blog</a></li>
+							<li><a href="images/ManuelElizaldi.pdf" target="_blank">Resume</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="https://github.com/ManuelElizaldi" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+							<li><a href="https://www.linkedin.com/in/manuelelizaldi/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://www.instagram.com/lifeof_elizaldi/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+							<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<h1>PyStrava</h1>
+									<img src="images/PyStrava-resized.png" alt="Project Logo"/>
+								</header>
+								<header class="major">	
+									</br><h3>Introduction</h3>
+								</header>
+									<p>
+									In 2020, during the pandemic, I bought a Garmin smartwatch to prioritize my health and monitor workouts. A digital record of progress motivated me to stay disciplined. After working out consistently for three years, I realized the potential of my accumulated data.
+
+									Fueled by curiosity, I explored options, shifting from Garmin's API to Strava's due to compatibility. Strava, akin to a fitness-oriented Facebook, held my Garmin-recorded workouts.
+									
+									Seeking personalized insights, I crafted a Workout Statistics dashboard and a Workout Effort Score, using variables like heart rate, calories, etc. Likewise I created a K-Nearest Neighbors Machine Learning model to classify each work with its corresponding level of effort.<br/>
+								</p>
+								<header class="major">	
+									<h3>Project Overview — How it Works</h3>
+								</header>
+									<p>
+									The foundation of this project is built upon an ETL (extract, trasnform, load) pipeline. It begins by extracting workouts from Strava using their API, then we format the data in Python and next we upload it to a Google Sheet in Google Drive. Finally, the Google Looker dashboard is connected to the dataset, enabling the display of insightful statistics. 
+									</p>
+									<span class="image fit"><img src="images/DataPipeline.png" alt="" /></span>
+									<header  class="major">
+									<h3>Effort Score</h3>
+									</header>
+									<p>
+										For the custom Workout Effort Score I use the information collected by my Garmin smartwatch, such as heart rate, distance run and calories burned. From there I establish different ranges (bins) based on the minimum, maximum, quartiles, and outliers of each variable.
+									</p>
+									<span class="image fit"><img src="images/AverageHeartRateBoxPlot.png" alt="" /></span>
+									<p>
+										Points are then assigned depending on the specific bin in which each variable falls. For instance, let’s focus on the average heart rate variable. Since a higher average heart rate signifies a more intense workout, we establish the following point ranges:
+									</p>
+									<ul>
+										<li>100: 5 points</li>
+										<li>100-130: 10 points</li>
+										<li>130-145: 15 points</li>
+										<li>145-155: 20 points</li>
+										<li>155-165: 30 points</li>
+										<li>165-170: 35 points</li>
+										<li>Above 170: 40 points</li>
+									</ul>
+									<p>
+										After assigning a scoring system to each variable, we calculate the sum of each column and store it on a new variable called “Effort Score”. Depending on the Effort Score, we determine the level of effort as follows:
+									</p>
+									<ul>
+										<li>0-100: No Effort</li>
+										<li>100-125: Low Effort</li>
+										<li>125-150: Medium Effort</li>
+										<li>150 or above: High Effort</li>
+									</ul>
+									<p>
+										Once each workout is assigned its respective level of effort we can visualize the relationship between variables like so:
+									</p>
+									<span class="image fit"><img src="images/RelationshipBetweenAvgHeartRateCalories.png" alt="" /></span>
+									<p>
+										As we can see in the graph, the higher the average rate, the more calories are burned, therefore, more effort is required.
+									</p>
+									<header class="major">
+										<h3>
+											Machine Learning Model - K - K-Nearest Neighbors
+										</h3>
+									</header>
+									<p>
+										The K-Nearest Neighbor model is a great tool to categorize events to a specific label/class and it works best with relatively small datasets. Likewise it is robust against outliers as it makes predictions based on similarity of nearby data points. In this project we use it to predict the level of effort of workouts. </br>
+
+									</br>To build this model I trained it using my own workout data, where 80% of the dataset was used for training and 20% for testing/predicting. It has shown a good level of accuracy, achieving 86% correctness in classifying instances. Of course, there is always room for improvement and the more workouts I log, the better it will perform.
+									</p>
+									<i><h4>Model Strengths and Weaknesses</h4></i>
+									<i><h5>Strenghts:</h5></i>
+									<ul>
+										<li>The model demonstrates high accuracy in labeling High and Medium effort workouts.</li>
+										<li>Overall, the model achieves an accuracy rate of 86%, indicating its effectiveness in correctly classifying workout effort levels</li>
+									</ul>
+									<i><h5>Weaknesses:</h5></i>
+
+								<ul class="actions special">
+                                    <li><a href="index.html" class="button large">Back Home</a></li>
+                                	<li><a href="https://github.com/ManuelElizaldi/PyStrava" class="button large" target="_blank">View Code</a></li>
+									<li><a href="https://lookerstudio.google.com/reporting/c8efd23d-4f39-42d1-a336-26aebac76fa5" class="button large" target="_blank">View Dashboard</a></li>
+									<li><a href="https://medium.com/@manuelelizaldi/pystrava-using-machine-learning-and-dashboarding-to-achieve-my-fitness-goals-6b1bfcbfeafd" class="button large" target="_blank">Learn More</a></li>
+								</ul>
+							</section>
+
+				<!-- Footer -->
+				<footer id="footer">
+					<section class="split contact">
+						<section class="alt">
+							<h3>Location</h3>
+							<p>
+							Austin, Texas
+							</p>
+						</section>
+						<section>
+							<h3>Email</h3>
+							<p>manuelelizaldib@gmail.com</p>
+						</section>
+						<section>
+							<h3>Social</h3>
+							<ul class="icons alt">
+								<li><a href="https://github.com/ManuelElizaldi" class="icon brands fa-github" target="_blank"><span class="label">GitHub</span></a></li>
+								<li><a href="https://www.linkedin.com/in/manuelelizaldi/" class="icon brands fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
+								<li><a href="https://www.instagram.com/lifeof_elizaldi/" class="icon brands fa-instagram" target="_blank"><span class="label">Instagram</span></a></li>
+							</ul>
+						</section>
+					</section>
+				</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
