@@ -119,7 +119,40 @@
 										<li>Overall, the model achieves an accuracy rate of 86%, indicating its effectiveness in correctly classifying workout effort levels</li>
 									</ul>
 									<i><h5>Weaknesses:</h5></i>
+									<ul>
+										<li>The model may not be as accurate in labeling low and no effort workouts compared to medium and high intensity ones, as there are fewer instances of the former in the dataset.</li>
+										<li>There is correlation between the Max Heart Rate and Average Heart Rate variables, as well as between the Max Speed and Average Speed variables. It might be necessary to evaluate and potentially drop some variables to avoid redundancy or multicollinearity in the dataset.</li>
+									</ul>
+									<header class="major">
+										<h3>
+											How I use PyStrava
+										</h3>
+									</header>
+										<p>
+											The dashboard consists of five pages that provide various insights. The “General Statistics” page offers a comprehensive overview of all activities, while the “Level of Effort” page provides detailed statistics on effort exerted during workouts. Additionally, there are separate pages dedicated to “Biking,” “Running,” and “Functional” activities, offering specific statistics for each. In the future, I plan to add a sixth page for swimming once I have collected more data for this sport.</br>
 
+										</br>Below is a picture showcasing the layout of the “General Statistics” page:
+										<span class="image fit"><img src="images/GeneralStatsPage.png" alt="General Stats Page" /></span>
+										</p>
+										<p>
+											Similarly, here's a picture displaying the “Level of Effort” page:
+										</p>
+										<span class="image fit"><img src="images/LevelOfEffort.png" alt="Level of Effort page" /></span>
+										<i><h4>Practical Use — Personal Achievement:</h4></i>
+										<p>
+											One noteworthy achievement was my completion of an ultra marathon on June 23, 2023. PyStrava played a significant role in my preparation for this challenging event. The Google Looker dashboard I developed for this project was essential in tracking my weekly and monthly running statistics.</br>
+										</p>
+										<p>
+										Here's an example of the Running page from the dashboard:
+										</p>
+										<span class="image fit"><img src="images/RunningPage.png" alt="Running Page" /></span>
+										<p>
+											Me crossing the finish line at the Coahuila Ultra Marathon 2023:
+										</p>
+										<span class="image fit"><img src="images/UltraCoahuila.png" alt="" /></span>
+										<p>
+											I hope it has sparked the motivation within you to pursue that hobby that captivates your interest or tackle that project that’s been roaming in your mind. By embarking on the journey and chasing after our goals we can find true fulfillment! This project has been a huge milestone for me because, much like the process of working out, through patience and dedication we can find what we are truly capable of.
+										</p>
 								<ul class="actions special">
                                     <li><a href="index.html" class="button large">Back Home</a></li>
                                 	<li><a href="https://github.com/ManuelElizaldi/PyStrava" class="button large" target="_blank">View Code</a></li>
