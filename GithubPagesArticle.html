@@ -61,11 +61,118 @@
 										In this article, I'll guide you through the process of creating your very own portfolio web page using GitHub Pages and HTML templates. Before we get started, it's worth noting that this process requires some basic experience with HTML and Git Bash. If you're new to these topics, don't worry! Throughout the article, I'll provide resources that can help you along the way.
 									<br/>
 									</p>
-								<ul class="actions special">
-                                    <li><a href="blog.html" class="button large">Back</a></li>
-								</ul>
-							</section>
-
+									<h2><b>Requirements</b></h2>
+									<p>
+										For this project, you will need a GitHub account, if you don't have one you can create one for free <a href="https://github.com/" target="_blank">here.</a><br/>
+									</p>
+									<p>
+										You will also need to install Git Bash in order to interact with the repository where the Git Page will be hosted from. Git Bash can be downloaded from this <a href="https://git-scm.com/downloads" target="_blank">link.</a>
+										<ul>
+											<li>After downloading Git Bash for your corresponding operating system, you will need configure it with your GitHub username and email. Open Git Bash, and run the following commands replacing "Your Name" with your actual name and "your.email@example.com" with your GitHub email address.</li>
+										</ul>
+										<pre>
+											<code>
+git config --global user.name "Your Name"
+git config --global user.email "your.email@example.com"
+											</code>
+										  </pre>
+										<ul>
+											<li>Make sure set up was successful by running the following command in Git Bash:</li>
+										</ul>
+										<pre>
+											<code>
+git config --global --list
+											</code>
+										  </pre>
+										You should see your account information displayed.
+									</p>
+									<h2><b>Creating Your Page:</b></h2>
+									<h2><b>Step 1: Create a New Repository</b></h2>
+									<p>
+										Go to your GitHub account and click on the "New" button to create a new repository.
+										<div style="text-align: center;">
+											<img src="images/RepositoryPage.png" alt="RepoPage" />
+										</div>
+									<br>
+										Give your repository a name and choose to make it public.
+										<div style="text-align: center;">
+											<img src="images/CreateNewRepoPage.png" alt="Createnewrepopage" />
+										</div>
+									<br>
+										<h2><b>Step 2: Cloning the Repository</b></h2>
+										First, navigate to your repository's page and copy the clone link.
+										<div style="text-align: center;">
+											<img src="images/CloneRepo.png" alt="CloneRepo" />
+										</div>
+									<br>
+									Next, open Git Bash and navigate to the directory where you want to store the repository. To clone the repository, use the following command:
+									<pre>
+										<code>
+git clone https://github.com/{Your Username}/my-website.git
+										</code>
+									  </pre>
+									After completing this step, you will have the folder that will contain your website's files.
+									If you don't know how to navigate files in the command line/Git Bash, here's an <a href="https://www.codecademy.com/learn/learn-the-command-line/modules/learn-the-command-line-navigation/cheatsheet" target="_blank">article</a> that covers the basics.
+									<br/>
+									<h2><b>Step 3: Download a Website Template</b></h2>
+									Once you've successfully cloned the repository, you can visit <a href="https://html5up.net/" target="_blank">Html5up</a>, a website that provides fully responsive, customizable, and free HTML and CSS3 website templates. By utilizing these templates, you can save yourself time and effort that would otherwise be spent building a website from scratch. Personally, I use Massively for my portfolio because I believe it best meets my needs, but feel free to explore all options.
+									<div style="text-align: center;">
+										<img src="images/html5up.png" alt="Html5up" style="max-width: 100%;" />
+									</div>
+									Download the files and extract them to the directory that you created for the website. The file index.html will be your home page, which you can modify to your liking. If you want to see an example of what you can create, here's a link to <a href="https://manuelelizaldi.github.io/" target="_blank">my portfolio</a> and the repository where this is hosted. If you have no experience using html, I encourage you to visit my <a href="https://github.com/ManuelElizaldi/ManuelElizaldi.github.io/blob/main/index.html" target="_blank">repository</a> and explore my code.</br>
+								<br>
+									Here is a small sample of my code:
+									<pre>
+										<code>
+&lt;section class="posts"&gt;
+&lt;article&gt;
+	&lt;header&gt;
+	&lt;h2&gt;Find Fm&lt;br /&gt;
+	Music Recommendation App
+	&lt;/h2&gt;
+	&lt;/header&gt;
+	&lt;a href="https://github.com/jdwrhodes/Music_Recommendation_Website" class="image fit" target="_blank"&gt;&lt;img src="images\musicapp.jpg" alt="" /&gt;&lt;/a&gt;
+	&lt;p&gt;
+	In this collaborative project me and my team created a music recommendation app using Flask to deploy a
+	K-Means Clustering Machine Learning model built in Python to suggest songs based on the 
+	similarities in audio features between the songs.&lt;/p&gt;
+	&lt;ul class="actions special"&gt;
+	&lt;li&gt;&lt;a href="https://github.com/jdwrhodes/Music_Recommendation_Website" class="button" target="_blank"&gt;View Project&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/article&gt;
+&lt;/section&gt;
+										</code>
+									  </pre>
+									<h2><b>Step 4: Enable GitHub Pages for your repository</b></h2>
+									Now that you have all the necessary website files, here's where the magic happens, it's time to enable the GitHub Pages service. To do this, follow these simple steps:
+									<ul>
+										<li>Go to your GitHub repository's "Settings" tab.</li>
+										<li>Scroll down to the "GitHub Pages" section.</li>
+									</ul>
+									<div style="text-align: center;">
+										<img src="images/GitHubPages.png" alt="GitHubPages" style="max-width: 100%;" />
+									</div>
+									<div style="text-align: center;">
+										<img src="images/GitHubPages2.png" alt="GitHubPages2" style="max-width: 100%;" />
+									</div>
+								<br>Under the "Source" dropdown, select "master branch" or “root”  as the source for GitHub Pages and save your changes. Also notice that you can add your own custom domain.
+								<div style="text-align: center;">
+									<img src="images/GitHubDomain.png" alt="GitHubPages2" style="max-width: 100%;" />
+								</div>
+								<br>Once these steps are completed, you will now have a live website that you can customize! The link to your website will be displayed in the top section of the GitHub Pages window.
+								<div style="text-align: center;">
+									<img src="images/GitHubLive.png" alt="GitHubPages2" style="max-width: 100%;" />
+								</div>
+								<br>
+								<h2><b>Conclusion</b></h2>
+								<br>
+								Building a captivating digital portfolio using GitHub Pages and HTML templates can revolutionize your professional presence. It allows you to showcase your skills, accomplishments, and growth, giving you a competitive edge in the modern job market. Embrace this digital age, unleash your creativity, and exhibit your true potential to the world. With a simple setup process and valuable resources, you can create an impressive portfolio that sets you apart and opens doors to countless opportunities. Take the leap and start crafting your personalized portfolio today!
+							</p>
+							
+							<ul class="actions special">
+								<li><a href="blog.html" class="button large">Back</a></li>
+							</ul>
+						</section>
 				<!-- Footer -->
 				<footer id="footer">
 					<section class="split contact">
